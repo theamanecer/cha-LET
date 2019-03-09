@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html ng-app ="myapp">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body ng-init="b=[1,34,55,65,78,45]" >
+    {{5+3}}
+
+    <input type="radio" ng-model="G" value="Male" />M
+    <input type="radio" ng-model="G" value="female" />F
+    GENDER IS : {{G}}
+    <select ng-model="opt">
+        <option>select</option>
+        <option ng-repeat="k in b" value="{{k}}">{{k}}</option>
+        </select>
+    {{opt}}
+
+    <div ng-controller="empcont">
+        {{myvar}}
+        <input type="text" ng-model="myval" />
+        <input type="button" value="click" ng-click="myfunc()" />
+        <input type="button" value="clickagain" ng-click="myfunc(myval,myval2,myval3)" />
+    </div>
+</body>
+</html>
+<script src="Scripts/angular.min.js"></script>
+<script src="Scripts/app.js"></script>
